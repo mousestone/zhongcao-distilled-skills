@@ -159,11 +159,11 @@ graph LR
 
 ```bash
 # 用户级 (所有项目可用)
-cp -r /Users/renhao/claude-cangjie/output/zhongcao/{ceae-planting-loop,excitation-state-capture,hit-product-trilogy,lifestyle-segmentation,reverse-funnel-strategy,super-user-collaboration,planting-org-pyramid,experience-management-loop,triple-ledger-system,user-value-formula,planting-champion-7steps,product-decision-quadrant} ~/.claude/skills/
+cp -r {ceae-planting-loop,excitation-state-capture,hit-product-trilogy,lifestyle-segmentation,reverse-funnel-strategy,super-user-collaboration,planting-org-pyramid,experience-management-loop,triple-ledger-system,user-value-formula,planting-champion-7steps,product-decision-quadrant} ~/.claude/skills/
 
 # 或项目级
-cp -r /Users/renhao/claude-cangjie/output/zhongcao/<skill-slug> <project>/.claude/skills/    # Claude Code
-cp -r /Users/renhao/claude-cangjie/output/zhongcao/<skill-slug> <project>/.cursor/skills/    # Cursor
+cp -r ./<skill-slug> <project>/.claude/skills/    # Claude Code
+cp -r ./<skill-slug> <project>/.cursor/skills/    # Cursor
 ```
 
 ---
@@ -173,7 +173,7 @@ cp -r /Users/renhao/claude-cangjie/output/zhongcao/<skill-slug> <project>/.curso
 所有 skill 均带有 `test-prompts.json` (darwin-skill 兼容格式), 可直接接入自动进化:
 
 ```
-darwin evolve /Users/renhao/claude-cangjie/output/zhongcao/
+darwin evolve ./
 ```
 
 > 预计高杠杆改动: dim3 (失败模式编码) 和 dim4 (检查点设计) 已通过本批 SKILL.md 的 E 段 (🔴CHECKPOINT + 🛑STOP + if-fail fallback) 内建,可省一轮 darwin 优化 (CLAUDE.md 教训)。
